@@ -1,0 +1,302 @@
+/* RESET E BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* NAVBAR */
+nav {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.logo .accent {
+  color: #FF3B3F;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu li a {
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #007BFF;
+}
+
+/* HERO */
+header.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #000, #1a1a1a);
+  padding: 0 60px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nome-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.nome-container p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.highlight {
+  color: #007BFF;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #FF3B3F;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #007BFF;
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #007BFF;
+}
+
+section p {
+  line-height: 1.6;
+}
+
+/* SOBRE */
+.sobre-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sobre-texto {
+  flex: 1 1 60%;
+  font-size: 1.1em;
+  color: #ddd;
+}
+
+.sobre-foto {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-sobre {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.foto-sobre:hover {
+  transform: scale(1.05);
+}
+
+/* HABILIDADES */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.skill {
+  /* background: #1c1c1c; */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+  cursor: pointer;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #007BFF, 0 0 24px #007BFF;
+}
+
+.skill i {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* PROJETOS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  border: 1px solid #333;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #007BFF;
+}
+
+.card-image {
+  height: 150px;
+  background-image: url(../assets/img/atenalogo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  font-style: italic;
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+/* CONTATO */
+.contato ul li {
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contato a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #999;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  nav {
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  header.hero {
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sobre-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section {
+    padding: 60px 30px;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+}
+
